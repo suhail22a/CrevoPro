@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import calendarIcon from '../../assets/calender.svg';
 import digitalSolutionIcon from '../../assets/digitalSolution.svg';
+import happyClients from '../../assets/happy_customer.png';
+
 
 const stats = [
   {
@@ -14,12 +16,18 @@ const stats = [
     title: "Digital solutions delivered",
     value: "100+",
     icon: digitalSolutionIcon
+  },
+  {
+    id: 3,
+    title: "Happy clients worldwide",
+    value: "50+",
+    icon: happyClients 
   }
 ];
 
 const WhyCrevoPro = () => {
   return (
-    <section className="why-crevopro">
+    <section id="why" className="why-crevopro">
       <div className="container">
         <motion.h2 
           className="section-title"
@@ -41,9 +49,11 @@ const WhyCrevoPro = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: stat.id * 0.1 }}
             >
-              <div className="stat-icon">
-                <img src={stat.icon} alt={stat.title} />
-              </div>
+              {stat.icon && (
+                <div className="stat-icon">
+                  <img src={stat.icon} alt={stat.title} />
+                </div>
+              )}
               <h3 className="stat-value">{stat.value}</h3>
               <p className="stat-title">{stat.title}</p>
             </motion.div>
@@ -94,4 +104,4 @@ const WhyCrevoPro = () => {
   );
 };
 
-export default WhyCrevoPro; 
+export default WhyCrevoPro;

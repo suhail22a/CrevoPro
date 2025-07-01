@@ -47,7 +47,8 @@ const About = () => {
               building long-term partnerships with our clients, understanding their unique challenges, 
               and delivering tailored solutions that exceed expectations.
             </motion.p>
-            
+
+            {/*
             <motion.div variants={containerVariants} className="about-stats">
               <motion.div variants={itemVariants} className="stat-item">
                 <div className="stat-number">05+</div>
@@ -62,8 +63,9 @@ const About = () => {
                 <div className="stat-label">Happy clients worldwide</div>
               </motion.div>
             </motion.div>
+            */}
           </motion.div>
-          
+
           <motion.div 
             className="about-images"
             initial="hidden"
@@ -99,4 +101,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
