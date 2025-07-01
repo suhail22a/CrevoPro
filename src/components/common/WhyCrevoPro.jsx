@@ -31,6 +31,7 @@ const WhyCrevoPro = () => {
       <div className="container">
         <motion.h2 
           className="section-title"
+          style={{ fontSize: '3.5rem' }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -39,11 +40,36 @@ const WhyCrevoPro = () => {
           Why CrevoPro
         </motion.h2>
         
-        <div className="stats-container">
+        <div
+          className="stats-container"
+          style={
+            window.innerWidth >= 992
+              ? {
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'stretch',
+                  gap: '2.5rem',
+                  width: '100%',
+                  flexWrap: 'nowrap',
+                }
+              : {
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '2rem',
+                  width: '100%',
+                }
+          }
+        >
           {stats.map(stat => (
             <motion.div 
               key={stat.id}
               className="stat-card"
+              style={
+                window.innerWidth >= 992
+                  ? { flex: '1 1 0', width: 'auto', maxWidth: 'none' }
+                  : { width: '100%' }
+              }
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -62,6 +88,17 @@ const WhyCrevoPro = () => {
         
         <motion.p 
           className="why-crevopro-text"
+          style={{
+            fontSize: '1.5rem',
+            fontWeight: 600,
+            background: 'linear-gradient(45deg, #05FB8D, #03AFAD)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent',
+            marginBottom: '1.2rem',
+            textAlign: 'center',
+          }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
