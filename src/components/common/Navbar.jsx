@@ -80,7 +80,7 @@ const Navbar = () => {
               <a href="#contact" className="contact-btn">Contact</a>
             </motion.li>
           </motion.ul>
-        </div>
+        </div>  
 
         <div className="navbar-search">
           <motion.form 
@@ -113,3 +113,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

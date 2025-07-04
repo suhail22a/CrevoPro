@@ -352,7 +352,6 @@ img {
     display: none;
   }
 }
-
 .about {
   background-color: #000000;
   padding: 80px 0;
@@ -370,7 +369,7 @@ img {
 @media (min-width: 768px) {
   .about .about-wrapper {
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
   }
 }
 .about .about-content {
@@ -380,8 +379,8 @@ img {
 }
 @media (min-width: 768px) {
   .about .about-content {
-    flex: 0 0 55%;
-    padding-right: 3rem;
+    flex: 0 0 45%;
+    /* padding-right: 3rem; */
     margin-bottom: 0;
   }
 }
@@ -451,32 +450,39 @@ img {
   position: relative;
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 90%);
 }
 @media (min-width: 768px) {
   .about .about-images {
-    flex: 0 0 45%;
+    flex: 0 0 75%;
     min-height: 450px;
   }
 }
 .about .about-image-bg {
   position: absolute;
-  width: 80%;
-  max-width: 350px;
-  bottom: 95px;
+  width: 100%;
+  /* max-width: 350px; */
+  bottom: -223px;
   z-index: 1;
+  transform: scale(0.8) !important;
+   transform-origin: left;
 }
 .about .about-image-bg img {
-  width: 100%;
+  width: 200%;
   height: auto;
   border-radius: 20px;
 }
 .about .about-image-front {
   position: absolute;
-  max-width: 600px;
+  /* max-width: 600px; */
   z-index: 2;
+  transform: scale(1.1) !important;
+   transform-origin: right;
+   /* display: inline-block;
+   transition: transform 0.3s ease; */
 }
 .about .about-image-front img {
   width: 100%;
@@ -491,6 +497,7 @@ img {
   overflow: hidden;
   border-top: 1px solid #777777;
   padding-top: 60px;
+  /* background: linear-gradient(to bottom right, #ffffff 0%, #dddddd 25%, #bbbbbb 50%, #999999 100%); */
 }
 .hero-container {
   max-width: 1200px;
@@ -1042,6 +1049,8 @@ img {
   position: relative;
   z-index: 2;
   text-align: center;
+   background: linear-gradient(to right, #f0f0f0, #999999);
+  /* background: linear-gradient(to right, #ffffff 0%, #dddddd 25%, #bbbbbb 50%, #999999 100%); */
 }
 .services .service-card .service-description {
   color: #999999;

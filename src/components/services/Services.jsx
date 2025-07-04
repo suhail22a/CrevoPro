@@ -50,6 +50,7 @@ const ServiceCard = ({ service }) => {
       <div className="service-icon">
         <img src={service.icon} alt={service.title} />
       </div>
+       {/* <motion.h2 className="service-title">{service.title}</motion.h2> */}
       <h3 className="service-title">{service.title}</h3>
       <p className="service-description">{service.description}</p>
       <motion.div 
